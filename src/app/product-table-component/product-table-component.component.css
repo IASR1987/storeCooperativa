@@ -1,0 +1,97 @@
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(55vh, 55vh)); /* Ajusta las columnas automáticamente */
+    grid-auto-rows: minmax(60vh, 60vh); /* Filas con altura mínima de 150px y máxima de 300px */
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 5vh;
+    padding-top: 3%;
+}
+
+
+/* Cada div individual puede seguir siendo un contenedor de contenido */
+.product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Centra el texto */
+    width: 80%;
+    height: 100%;
+    border: #a9e70e solid 2px;
+    box-shadow: 0px 0px 10px 0px #0a0a0a;
+}
+
+.product:hover img{
+    width: 90%;
+    height: 90%;
+    transform: scale(1.2); /* Aumenta el tamaño en hover sin afectar los límites */
+    opacity: 0.7;
+}
+
+.image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 70%;
+    overflow: hidden; /* Evita el desbordamiento */
+}
+
+.imgProduct{
+    width: 100%;
+    height: 100%;
+    padding: 3px;
+    transition: border 0.1s ease-in-out;
+}
+
+.name{
+    font-size: small;
+    color: #424040;
+    height: 5%;
+}
+
+.price{
+    font-size: small;
+    font-weight: bold;
+    color: #000000;
+    height: 5%;
+}
+
+button{
+    background-color: #a9e70e;
+    border: black solid 2px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #0a0a0a;
+    cursor: pointer;
+    margin-bottom: 5%;
+    padding: 2%;
+}
+
+
+.linea-horizontal {
+    border-top: 2px solid black;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2%;
+}
+
+
+.slider-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 3%;
+    width: 100%;
+    height: 100%;
+}

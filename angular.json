@@ -68,7 +68,10 @@
             },
             "development": {
               "buildTarget": "storeCooperativa:build:development"
-            }
+            },
+            "options": {
+      "host": "localhost"
+  }
           },
           "defaultConfiguration": "development"
         },
@@ -97,5 +100,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "8d15c97e-f972-4c75-81f2-ecfef2d2666b"
   }
 }
