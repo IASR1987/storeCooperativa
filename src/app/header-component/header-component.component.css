@@ -9,17 +9,19 @@
     flex-direction: row;
     padding-bottom: 1%;
 }
-.logo img{
+.Logo-container img{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25vh;
-    height: 25vh;
+    margin-left: 15%;
+    width: 60%;
+    height: 60%;
 }
 
 .options{
     display: flex;
     justify-content: space-around;
+    width: 100%;
     gap: 1em;
 }
 
@@ -28,20 +30,20 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: antiquewhite;
-    width: 20vh;
-    height: 10vh;
-    padding-left: 2%;
-    padding-right: 2%;
-    border-radius: 5%;
-    font-size:3vh;
-    font-weight:900;
-    border:#046f24 solid 1px;
-    font-family: "Birthstone", serif;
+    width: 30%;
     font-style: normal;
-    box-shadow: 0px 0px 10px 0px #046f24;
 }
 
+p{
+    font-size: 70%;
+    font-weight: bold;
+    color: #000000;
+}
+
+.icon{
+    width: 50%;
+    height: 50%;
+}
 
 
 

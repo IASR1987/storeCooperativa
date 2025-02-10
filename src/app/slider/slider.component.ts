@@ -18,11 +18,15 @@ export class SliderComponent {
 
   currentIndex: number = 0;
 
+
   constructor() { }
+
 
   prevItem() {
     this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
   }
 
-
+  nextItem() {
+    this.currentIndex = (this.currentIndex + 1) % this.images.length;
+  }
 }
