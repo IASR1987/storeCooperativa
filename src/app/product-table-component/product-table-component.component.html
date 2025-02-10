@@ -1,4 +1,4 @@
-<div >
+<div class="container">
     <div class="slider-container">
         <app-slider></app-slider>
     </div>
@@ -9,11 +9,14 @@
             <div class="image-container">
                 <img class="imgProduct" src="{{product.imgSrc}}" alt="{{product.name}}">
             </div>
-            <h3 class="name">{{ product.name }}</h3>
-            <h3 class="price">{{product.price}}</h3>
-            <button>Ver Producto</button>
+            <div class="product-info">
+                <h2 class="name">{{ product.name }}</h2>
+                <h2 class="price">{{product.price}} €</h2>
+            </div>
+            <div class="button">Ver Producto</div>
         </div>
     </div>
+    
         
     <h1>Guadalimón</h1>
     <hr class="linea-horizontal">
@@ -22,9 +25,9 @@
             <div class="image-container">
                 <img class="imgProduct" src="{{product.imgSrc}}" alt="{{product.name}}">
             </div>
-            <h3 class="name">{{ product.name }}</h3>
-            <h3 class="price">{{product.price}}</h3>
-            <button>Ver Producto</button>
+            <h2 class="name">{{ product.name }}</h2>
+            <h2 class="price">{{product.price}} €</h2>
+            <div class="button">Ver Producto</div>
         </div>
     </div>
 
@@ -35,9 +38,11 @@
             <div class="image-container">
                 <img class="imgProduct" src="{{product.imgSrc}}" alt="{{product.name}}">
             </div>
-            <h3 class="name">{{ product.name }}</h3>
-            <h3 class="price">{{product.price}}</h3>
-            <button>Ver Producto</button>
+            <div class="product-info">
+                <h3 class="name">{{ product.name }}</h3>
+                <h3 class="price">{{product.price}} €</h3>
+            </div>
+            <div class="button">Ver Producto</div>
         </div>
     </div>
 
@@ -49,8 +54,8 @@
                 <img class="imgProduct" src="{{product.imgSrc}}" alt="{{product.name}}">
             </div>
             <h3 class="name">{{ product.name }}</h3>
-            <h3 class="price">{{product.price}}</h3>
-            <button>Ver Producto</button>
+            <h3 class="price">{{product.price}} €</h3>
+            <div class="button">Ver Producto</div>
         </div>
     </div>
 

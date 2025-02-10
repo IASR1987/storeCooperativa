@@ -2,6 +2,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { SliderComponent } from "../slider/slider.component";
+import { ProductsService } from '../services/Products.service';
 
 @Component({
     selector: 'app-product-table-component',
@@ -11,6 +12,47 @@ import { SliderComponent } from "../slider/slider.component";
 })
 
 export class ProductTableComponentComponent {
+
+    catalog: any[] = [];
+    productSG: any[] = [];
+    productG: any[] = [];
+    productE: any[] = [];
+    productP: any[] = [];
+    
+    constructor(private productService: ProductsService) {}
+
+
+    ngOnInit(){
+        this.cargarDatos();
+        this.cargarProductos();
+    }
+
+    cargarDatos(): void {
+        this.productService.getDatos().subscribe({
+            next: (product) => {
+                this.catalog = product
+            }
+        });
+        console.log(this.catalog);
+        
+    }
+
+    cargarProductos(): void {
+        for (let product of this.catalog) {
+            console.log(product.serie);
+            if(product.serie === "Sierra de Guadalcanal"){
+                this.productSG.push(product);
+                console.log("hola");
+            }else if(product.serie === "Guadalimón"){
+                this.productG.push(product);
+            }else if(product.serie === "Ecológico"){
+                this.productE.push(product);
+            } else if(product.serie === "Premium"){
+                this.productP.push(product);
+            }
+        }
+    }
+    /*
     // Array con los Productos
     productSG = [
         { name: 'AOVE Sierra de Guadalcanal 5 Litros', serie: 'Sierra de Guadalcanal', imgSrc: 'assets/5L_SG.png', price: '39€'},
@@ -34,13 +76,13 @@ export class ProductTableComponentComponent {
     productP= [
         { name: 'Botella de 2 litros', serie: 'Premium', imgSrc: 'assets/2L_E.png',price: "50€"},
         { name: 'Botella de 500 ml', serie: 'Premium', imgSrc: 'assets/0.5L_E.png',price: "50€"},
-    ];
+    ];/*
     //productR= [
        // { name: 'Botella de 2 litros', attack: 'Regalo', imgSrc: 'assets/2L_E.png'},
        // { name: 'Botella de 500 ml', attack: 'Regalo', imgSrc: 'assets/0.5L_E.png'},
     //];
 
-
+        */
     // Método para manejar el clic en un Pokémon
     onSelectProduct(product: any) {
         if (product.isVisible) {
@@ -49,4 +91,6 @@ export class ProductTableComponentComponent {
 
         console.log(product);
         }
+
+    
 }

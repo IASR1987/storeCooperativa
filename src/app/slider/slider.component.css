@@ -44,6 +44,13 @@
     margin-right: 45%;
 }
 
-.icon-left :hover{
-    cursor: pointer;
+
+.icon-left:hover{
+    fill: rgb(230, 227, 10) ;
+    stroke: rgb(230, 227, 10);
+}
+
+.icon-right:hover{
+    fill: rgb(230, 227, 10) ;
+    stroke: rgb(230, 227, 10);
 }
