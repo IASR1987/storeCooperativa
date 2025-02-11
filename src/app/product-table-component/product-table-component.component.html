@@ -2,6 +2,12 @@
     <div class="slider-container">
         <app-slider></app-slider>
     </div>
+
+    <!-- Contenedor del botón -->
+    <div class="button-container">
+        <button mat-raised-button (click)="openModal()">Abrir Modal</button>
+    </div>
+
     <h1>Aceite de Oliva Virgen Extra Sierra de Guadalcanal</h1>
     <hr class="linea-horizontal">
     <div class="product-container">
@@ -21,12 +27,14 @@
     <h1>Guadalimón</h1>
     <hr class="linea-horizontal">
     <div class="product-container">
-        <div *ngFor="let product of productG" class="product">
+        <div *ngFor="let product of productG" class="product ">
             <div class="image-container">
                 <img class="imgProduct" src="{{product.imgSrc}}" alt="{{product.name}}">
             </div>
-            <h2 class="name">{{ product.name }}</h2>
-            <h2 class="price">{{product.price}} €</h2>
+            <div class="product-info">
+                <h2 class="name">{{ product.name }}</h2>
+                <h2 class="price">{{product.price}} €</h2>
+            </div>
             <div class="button">Ver Producto</div>
         </div>
     </div>
@@ -34,13 +42,13 @@
     <h1>Sierra de Guadalcanal Premium</h1>
     <hr class="linea-horizontal">
     <div class="product-container">
-        <div *ngFor="let product of productE" class="product">
+        <div *ngFor="let product of productP" class="product ">
             <div class="image-container">
                 <img class="imgProduct" src="{{product.imgSrc}}" alt="{{product.name}}">
             </div>
             <div class="product-info">
-                <h3 class="name">{{ product.name }}</h3>
-                <h3 class="price">{{product.price}} €</h3>
+                <h2 class="name">{{ product.name }}</h2>
+                <h2 class="price">{{product.price}} €</h2>
             </div>
             <div class="button">Ver Producto</div>
         </div>
@@ -49,27 +57,15 @@
     <h1>Sierra de Guadalcanal Ecológico</h1>
     <hr class="linea-horizontal">
     <div class="product-container">
-        <div *ngFor="let product of productE" class="product">
+        <div *ngFor="let product of productE" class="product ">
             <div class="image-container">
                 <img class="imgProduct" src="{{product.imgSrc}}" alt="{{product.name}}">
             </div>
-            <h3 class="name">{{ product.name }}</h3>
-            <h3 class="price">{{product.price}} €</h3>
+            <div class="product-info">
+                <h2 class="name">{{ product.name }}</h2>
+                <h2 class="price">{{product.price}} €</h2>
+            </div>
             <div class="button">Ver Producto</div>
         </div>
     </div>
-
-    <!--
-    <h1>REGALOS</h1>
-    <hr class="linea-horizontal">
-    <div class="product-container">
-        <div *ngFor="let product of productE" class="product">
-            <div class="image-container">
-                <img class="imgProduct" src="{{product.imgSrc}}" alt="{{product.name}}">
-            </div>
-            <h3 class="name">{{ product.name }}</h3>
-            <button>Ver Producto</button>
-        </div>
-    </div>-->
-
 </div>
