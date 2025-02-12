@@ -77,19 +77,6 @@ h1{
     height: 5%;
 }
 
-.button{
-    background-color: #a9e70e;
-    border: black solid 2px;
-    border-radius: 5%;
-    font-size: 1em;
-    font-weight: bold;
-    color: #0a0a0a;
-    cursor:pointer;
-    padding: 2%;
-    margin-bottom: 5%;
-}
-
-
 .linea-horizontal {
     border-top: 2px solid black;
     margin-left: 10%;
@@ -108,9 +95,19 @@ h1{
     height: 100%;
 }
 
+.modal-container{
+    background-color: #a9e70e;
+    border: black solid 2px;
+    border-radius: 5%;
+    font-size: 1em;
+    font-weight: bold;
+    color: #0a0a0a;
+    cursor:pointer;
+    padding: 2%;
+    margin-bottom: 5%;
+}
 
-
-.button:hover{
+.modal-container:hover{
     background-color: #0a0a0a;
     color: #a9e70e;
 }

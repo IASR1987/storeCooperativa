@@ -3,11 +3,8 @@
         <app-slider></app-slider>
     </div>
 
-    <!-- Contenedor del botón -->
-    <div class="button-container">
-        <button mat-raised-button (click)="openModal()">Abrir Modal</button>
-    </div>
-
+    
+    
     <h1>Aceite de Oliva Virgen Extra Sierra de Guadalcanal</h1>
     <hr class="linea-horizontal">
     <div class="product-container">
@@ -19,7 +16,9 @@
                 <h2 class="name">{{ product.name }}</h2>
                 <h2 class="price">{{product.price}} €</h2>
             </div>
-            <div class="button">Ver Producto</div>
+            <div class="modal-container">
+                <div mat-raised-button (click)="openModal(product.id)">Ver Producto</div>
+            </div>
         </div>
     </div>
     
@@ -35,7 +34,9 @@
                 <h2 class="name">{{ product.name }}</h2>
                 <h2 class="price">{{product.price}} €</h2>
             </div>
-            <div class="button">Ver Producto</div>
+            <div class="modal-container">
+                <div mat-raised-button (click)="openModal(product.id)">Ver Producto</div>
+            </div>
         </div>
     </div>
 
@@ -50,7 +51,9 @@
                 <h2 class="name">{{ product.name }}</h2>
                 <h2 class="price">{{product.price}} €</h2>
             </div>
-            <div class="button">Ver Producto</div>
+            <div class="modal-container">
+                <div mat-raised-button (click)="openModal(product.id)">Ver Producto</div>
+            </div>
         </div>
     </div>
 
@@ -65,7 +68,9 @@
                 <h2 class="name">{{ product.name }}</h2>
                 <h2 class="price">{{product.price}} €</h2>
             </div>
-            <div class="button">Ver Producto</div>
+            <div class="modal-container">
+                <div mat-raised-button (click)="openModal(product.id)">Ver Producto</div>
+            </div>
         </div>
     </div>
 </div>

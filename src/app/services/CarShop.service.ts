@@ -7,12 +7,13 @@ import { Injectable } from '@angular/core';
 })
 export class CarShopService {
 
-    private baseUrl = 'http://localhost:8080';
+    private baseUrl = 'http://localhost:8080/cart';
 
 
     constructor(private http: HttpClient) {}
 
-    getDatos(): Observable<any> {
-        return this.http.get(this.baseUrl+'/product/all');
+    addToCart(userId: number, productId: number, quantity: number): Observable<any> {
+        return this.http.post(this.baseUrl, { userId, productId, quantity });
     }
+
 }

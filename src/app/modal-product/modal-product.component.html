@@ -1,37 +1,24 @@
 <div class="container">
     <mat-dialog-content class="content">
         <div class="image">
-            <img src="{{data.image}}" alt="{{data.name}}">
+            <img [src]="data.image" [alt]="data.name">
         </div>
         <div class="info">
-            <h3 mat-dialog-title class="name">{{ data.name }}</h3>
+            <div>
+                <h3 mat-dialog-title class="name">{{ data.name }}</h3>
+            </div>
+            
             <div class="description">
                 <h2 class="descriptionText">{{ data.description }}</h2>
+            </div>
+            <div>
                 <p>Precio: {{ data.price }} €</p>
             </div>
         </div>
     </mat-dialog-content>
-    
-    <mat-dialog-actions class="actions">
-        <div mat-button mat-dialog-close class="addCarShop">Añadir a Carrito</div>
+
+    <mat-dialog-actions align="end" class="actions">
+        <div mat-button class="addCarShop" (click)="addToCart(data.id)">Añadir a Carrito</div>
         <div mat-button mat-dialog-close class="closeModal">Cerrar</div>
     </mat-dialog-actions>
 </div>
-
-<!--
-<h2 mat-dialog-title>{{data.name}}</h2>
-<mat-dialog-content>
-    <div class="container">
-
-    </div>
-    <p>{{data.name}}</p>
-    <p>{{data.description}}</p>
-    <p>{{data.price}}</p>
-</mat-dialog-content>
-<mat-dialog-actions>
-    <div mat-button mat-dialog>Añadir a Carrito</div>
-    <div mat-button mat-dialog-close>Cerrar</div>
-</mat-dialog-actions>
-
--->
-

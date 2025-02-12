@@ -25,8 +25,7 @@ export class ProductTableComponentComponent {
     
     constructor(
         private productService: ProductsService,
-        private dialog: MatDialog
-        //private carShopService: CarShopService    
+        private dialog: MatDialog   
     ) {}
 
 
@@ -58,13 +57,13 @@ export class ProductTableComponentComponent {
         }
     }
 
-    openModal() {
+    openModal(productId: number) {
         // Verificamos que el primer producto tenga los datos esperados
-        const product = this.catalog[0];
+        const product = this.catalog[productId-1];
         console.log(product.imgSrc);
         if (product.name && product.description && product.price) {
             this.dialog.open(ModalProductComponent, {
-                
+                width: '75%',
                 data: {
                 image: product.imgSrc,
                 name: product.name,
@@ -76,10 +75,4 @@ export class ProductTableComponentComponent {
             console.error('Error: El producto no tiene los datos completos.');
         }
     }
-
-    /*openModal(index: number) {
-        this.dialog.open(ModalProductComponent, {
-          data: { index, product: this.catalog[index] } // Pasamos el índice y los datos del producto
-        });
-    }*/
 }
