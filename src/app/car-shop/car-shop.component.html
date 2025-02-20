@@ -1,1 +1,32 @@
-<p>car-shop works!</p>
+
+<div class="container">
+    <div class="product-container">
+        <div class="title">
+            <h1>Carrito de compras</h1>
+        </div>
+        <div *ngFor="let product of buyList" class="product">
+                <div class="col">
+                    <img src="{{product.imgSrc}}" alt="product" class="product-image">
+                </div>
+                <div class="col">
+                    <p>{{product.name}}</p>
+                    <p class="price">{{product.price}} €</p>
+                    <p class="quantity">Cantidad comprada :{{product.quantity}}</p>
+                    <div class="totalRemove">
+                        <p>Total: {{product.price * product.quantity}} €</p>
+                        <div class="rubbish">
+                            <img src="assets/rubbish.svg" (click)="borrarProducto(product.id)" alt="Carrito Compra" class="icon">
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="totalCar">
+        <p>{{calcularTotalQuantity()}} Artículos</p>
+        <div class="totalPrice">
+            <p> Total (IVA inc.)</p>
+            <p>{{calcularTotal()}},00 €</p>
+        </div>
+        <button class="buyButton" (click)="addOrderBuy()" >FINALIZAR PEDIDO</button>
+    </div>
+</div>

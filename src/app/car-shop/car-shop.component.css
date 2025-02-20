@@ -1,0 +1,110 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+.product-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin-left: 10%;
+    height: fit-content;
+    margin-top: 1%;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.title{
+    background-color: rgb(231, 237, 224);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 60%;
+}
+
+.product{
+    display: grid;
+    grid-template-columns: 3fr 6fr;
+    width: 100%;
+    height: 10%;
+    align-items: center;
+    border-bottom: 1px solid rgb(114, 114, 104);
+    font-size: 80%;
+}
+.price{
+    font-size: medium;
+    font-weight: bold;
+    color: rgb(162, 117, 3);
+}
+
+.product-image{
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(5px 5px 5px rgba(10, 10, 10, 0.5));
+}
+
+.quantity{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.totalRemove{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 3%;
+    width: 100%;
+    height: 100%;
+}
+
+.totalCar{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: fit-content;
+    margin-left: 10%;
+    padding: 1%;
+    margin-top: 1%;
+}
+
+.buyButton{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: fit-content;
+    margin-top: 6%;
+    padding: 2%;
+}
+
+.totalPrice{
+    font-size: small;
+    background-color: silver;
+    display: flex;
+    justify-content: space-between;
+    height:min-content;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.rubbish{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.icon{
+    width: 70%;
+    height: 70%;
+}
+
+.icon:hover{
+    cursor: pointer;
+    filter:invert(60%)    
+}
+

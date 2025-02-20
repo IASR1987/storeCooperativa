@@ -1,0 +1,16 @@
+
+<div class="container">
+    <div *ngFor="let order of orderBuyList" class="product">
+        <div class="col">
+            <p>Pedido Nº {{order.IdOrder}}</p>
+            <p>Id Usuario {{order.IdUser}}</p>
+            <p>Fecha de compra {{order.date}}</p>
+        </div>
+        <div class="col">
+            <p>Estado {{order.status}}</p>
+            <p>Metodo de pago {{order.paymentMethod}}</p>
+            <p>Total {{order.total}} €</p>
+        </div>
+    </div>
+</div>
+

@@ -12,8 +12,19 @@ export class CarShopService {
 
     constructor(private http: HttpClient) {}
 
-    addToCart(userId: number, productId: number, quantity: number): Observable<any> {
-        return this.http.post(this.baseUrl, { userId, productId, quantity });
+    addToCart(userId: number, productId: number, quantity: number, name:string, imgSrc:string): Observable<any> {
+        return this.http.post(this.baseUrl+"/addCart", { userId, productId, quantity, name, imgSrc });
     }
 
+    getDatos(): Observable<any> {
+        return this.http.get(this.baseUrl+'/all');
+    }
+
+    deleteProduct(id: number): Observable<any> {
+        return this.http.delete(this.baseUrl+'/deleteCartsById?id='+id);
+    }
+
+    deleteAllProductsByIdUser(id:number): Observable<any> {
+        return this.http.delete(this.baseUrl+'/deleteCartsByIdUser?id='+id);
+    }
 }

@@ -14,11 +14,26 @@
             <div>
                 <p>Precio: {{ data.price }} €</p>
             </div>
+            <div>
+                <select name="cantidad" [(ngModel)]="selectedQuantity">
+                    <option value=-1 disabled select>Seleccione Cantidad</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5</option>
+                    <option value=6>6</option>
+                    <option value=7>7</option>
+                    <option value=8>8</option>
+                    <option value=9>9</option>
+                    <option value=10>10</option>
+                </select>                
+            </div>
         </div>
     </mat-dialog-content>
 
     <mat-dialog-actions align="end" class="actions">
-        <div mat-button class="addCarShop" (click)="addToCart(data.id)">Añadir a Carrito</div>
+        <div mat-button class="addCarShop" (click)="addToCart(data.id,selectedQuantity,data.name, data.imgSrc)">Añadir a Carrito</div>
         <div mat-button mat-dialog-close class="closeModal">Cerrar</div>
     </mat-dialog-actions>
 </div>

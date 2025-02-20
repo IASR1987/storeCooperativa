@@ -7,15 +7,14 @@
     align-items: center;
     background-color: #f4f4f4;
     flex-direction: row;
-    padding-bottom: 1%;
 }
 .Logo-container img{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 15%;
-    width: 60%;
-    height: 60%;
+    width: 80%;
+    height: 80%;
 }
 
 .options{
@@ -31,19 +30,30 @@
     align-items: center;
     text-align: center;
     width: 30%;
-    font-style: normal;
+    font-style:italic;
+    text-decoration: none; /* Elimina la línea */
 }
 
 p{
-    font-size: 70%;
+    font-size: 80%;
     font-weight: bold;
     color: #000000;
 }
 
 .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50%;
     height: 50%;
 }
+
+.icon:hover{
+    cursor: pointer;
+    filter:invert(60%);
+    color:gray;
+}
+
 
 
 
