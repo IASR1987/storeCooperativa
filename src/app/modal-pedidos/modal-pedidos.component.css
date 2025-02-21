@@ -1,0 +1,80 @@
+.container{
+    background-color: beige;
+    width: 100%;
+    height: 100%;
+}
+.content{
+    display: grid;
+    grid-template-columns: 3.5fr 5fr;
+    margin: 0;
+    padding: 2%;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+}
+
+img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.info{
+    display: grid;
+    grid-template-rows: 0.5fr 3fr 0.5fr;
+    text-align: justify;
+    width: 100%;
+}
+.name{
+    font-size: medium;
+    margin: 0;
+    padding: 0;
+}
+
+.description{
+    font-size: small;
+    height: 100%;
+    width: 100%;
+}
+
+h2{
+    font-size: small;
+}
+
+.actions{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    font-size: small;
+}
+
+.addCarShop{
+    background-color: rgb(217, 234, 23);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3%;
+    padding: 3%;
+    width: 50%;
+}
+
+.closeModal{
+    background-color: rgb(199, 195, 195);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3%;
+    padding: 3%;
+    width: 50%;
+}
+
+.descriptionText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70%;
+}

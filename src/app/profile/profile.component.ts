@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OrderDetailService } from '../services/OrderDetail.service'; // Asegúrate de que el nombre del archivo y la ruta sean correctos
 import { BuyOrdersService } from '../services/BuyOrders.service'; // Asegúrate de que el nombre del archivo y la ruta sean correctos
+import { Order } from '../models/order.model'; // Importa la interfaz Order desde el archivo correcto
 
 @Component({
   selector: 'app-profile',
@@ -13,34 +14,28 @@ import { BuyOrdersService } from '../services/BuyOrders.service'; // Asegúrate 
 export class ProfileComponent implements OnInit {
 
   orderDetailList: any[] = [];
-  orderBuyList: any[] = [];
+  orderBuyList: Order[] = [];
+  newDate: string = '';
+  newDates: any[] = [];
+  contador: number = 0;
+  orderModalList: any[] = [];
+  productDetailList: any[] = [];
+
 
   constructor(
     private orderDetailService: OrderDetailService,
-    private BuyOrdersService: BuyOrdersService
+    private BuyOrdersService: BuyOrdersService,
   ) { }
 
   ngOnInit(): void {
-   this.cargarDatosOrderBuy()
-  }
-
-  cargarDatosOrderDetail(): void {
-    this.orderDetailService.showOrderDetail().subscribe({
-      next: (product) => {
-        this.orderDetailList = product;
-        console.log(this.orderDetailList);
-      },
-      error: (err) => {
-        console.error('Error cargando los detalles de los pedidos: ', err);
-      }
-    });
+    this.cargarDatosOrderBuy()
   }
 
   cargarDatosOrderBuy(): void {
     this.BuyOrdersService.showOrderBuy().subscribe({
-      next: (product) => {
+      next: (product: Order[]) => {
         this.orderBuyList = product;
-        console.log(product);
+        console.log('Datos de los pedidos: ', this.orderBuyList);
       },
       error: (err) => {
         console.error('Error cargando los detalles de los pedidos: ', err);
@@ -48,3 +43,4 @@ export class ProfileComponent implements OnInit {
     });
   }
 }
+

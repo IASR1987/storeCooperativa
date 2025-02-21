@@ -1,0 +1,29 @@
+.container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    font-size: small;
+}
+.profile-order{
+    background-color: beige;
+    border: 1px solid black;
+    margin: 10%;
+    padding:3%;
+    border-radius: 3%;
+}
+
+.text{
+    display: flex;
+    justify-content: flex-start;
+}
+.data{
+    text-align: center;
+}
+
+.modal-container{
+    display:flex;
+    font-size: small;
+    border: 1px solid black;
+    background-color: bisque;
+    border-radius: 10%;
+}

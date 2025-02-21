@@ -3,16 +3,15 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { SliderComponent } from "../slider/slider.component";
 import { ProductsService } from '../services/Products.service';
-import { MatDialog } from '@angular/material/dialog';
-import { ModalProductComponent } from '../modal-product/modal-product.component'; // Asegúrate de que la ruta sea correcta
-import { MatButtonModule } from '@angular/material/button';
-import { ChangeDetectorRef } from '@angular/core';
-import { ProfileComponent } from "../profile/profile.component";
+import { MatDialog } from '@angular/material/dialog';//modal
+import { ModalProductComponent } from '../modal-product/modal-product.component'; // modal
+import { MatButtonModule } from '@angular/material/button';//modal
+import { ChangeDetectorRef } from '@angular/core';//forzar actualizacion vista
 
 @Component({
     selector: 'app-product-table-component',
     standalone: true,
-    imports: [CommonModule, SliderComponent, MatButtonModule, ProfileComponent],
+    imports: [CommonModule, SliderComponent, MatButtonModule],
     templateUrl: './product-table-component.component.html',
     styleUrl: './product-table-component.component.css'
 })
@@ -74,7 +73,7 @@ export class ProductTableComponentComponent {
     openModal(productId: number) {
         // Verificamos que el primer producto tenga los datos esperados
         const product = this.catalog[productId-1];
-        console.log("Limoner"+product.id);
+        
         if (product.name && product.description && product.price) {
             this.dialog.open(ModalProductComponent, {
                 width: '75%',
